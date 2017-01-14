@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.theme-1.4.5.css">
+
+    <script src="jquery.mobile-1.4.5/js/jquery.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <style>
+        .login-left{
+            float:left;
+            margin-left: 15%;
+        }
+        .register-right{
+            float: right;
+            margin-right: 15%;
+        }
+        .back{
+            width:90%;
+            height: 20px;
+            left:1%;
+            text-align: center;
+            color:white !important;
+            font-weight: bold !important;
+            background-color: #f60 !important;
+        }
+        .ui-content{
+            border: none;
+            height: 100% !important;
+        }
+        .black-back{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left:-0;
+            top:0;
+            background-color: rgba(0,0,0,0.3) !important;
+            display: none;
+            z-index: 100;
+        }
+        .inblack-back{
+            margin:100px 0;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="page1" data-role="page">
+    <div data-role="header">
+        <h1>Page 1</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <a href="#page2" class="login-left">登陆</a>
+        <a href="#page3" class="register-right">注册</a>
+    </div>
+</div>
+
+<div id="page2" data-role="page">
+    <div data-role="header">
+        <h1>登录</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <form id="login-form">
+            <br/>
+            <label>
+                用户名：
+                <input type="text" name="user" required="required">
+            </label>
+            <br/>
+
+            <label>
+                密码：
+            <input type="password" name="password" required="required">
+            </label>
+            <br/>
+            <input type="submit" value="提交"  data-rel="popup"/>
+            <br/>
+            <div data-role="content" id="popupBasic1" class="black-back">
+                <div class="inblack-back ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+                <p id="login-result"> This is a completely basic popup, no options set.</p>
+                    <a href="#page2" onclick="moveout(1)">返回</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#page1" onclick="moveout(1)">关闭</a>
+                  </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div data-role="footer">
+        <a href="#page1" class="back">后&nbsp;退</a>
+    </div>
+</div>
+
+
+<div id="page3" data-role="page">
+    <div data-role="header">
+        <h1>注册</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <form id="register-form">
+            <label>
+                用户名：
+                <input type="text" name="user" required="required">
+            </label>
+            <label>
+                密码：
+                <input type="password" name="password" required="required">
+            </label>
+            <label>
+                密码确认：
+                <input type="password" name="password-confirm" required="required">
+            </label>
+            <div style="height: 10px"></div>
+            <input type="submit" value="提交"  data-rel="popup"/>
+
+            <!--<a href="#popupBasic2" data-rel="popup" id="register-submit">提交</a>-->
+
+            <div data-role="content" id="popupBasic2" class="black-back">
+                <div class="inblack-back ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all">
+                    <p id="register-result"> This is a completely basic popup, no options set.</p>
+                    <a href="#page3" onclick="moveout(2)">返回</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#page1" onclick="moveout(2)">关闭</a>
+                </div>
+
+            </div>
+            <br/>
+        </form>
+    </div>
+    <div data-role="footer">
+        <a href="#page1" class="back">后&nbsp;退</a>
+    </div>
+</div>
+<script src="login.js"></script>
+<script src="register.js"></script>
+<script src="mian.js"></script>
+</body>
+</html>

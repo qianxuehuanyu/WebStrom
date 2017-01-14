@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        *{
+            font-size:20px;
+            margin-bottom:5px;
+        }
+        label{
+            display:inline-block;
+            font-size:15px;
+            width:200px;
+        }
+        p{
+            height:40px;
+            color:red;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+<h3>用户注册</h3>
+<form id="form_sign_up">
+    <label>请输入注册用户名：</label>
+    <input type="text" id="sign_up_name" required="required" /><br/>
+    <label>请输入注册：</label>
+    <input type="password" id="sign_up_password" required="required" /><br/>
+    <label>请确认注册密码：</label>
+    <input type="password" id="sign_up_password_again" required="required" /><br/>
+
+    <input type="submit" value="注册">
+</form>
+
+<p id="sign_up_result"></p>
+
+<script src="main.js"></script>
+</body>
+</html>

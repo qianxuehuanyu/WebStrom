@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        *{
+            font-size:20px;
+            margin-bottom:5px;
+        }
+        label{
+            display:inline-block;
+            font-size:15px;
+            width:200px;
+        }
+        p{
+            height:40px;
+            color:red;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+<h3>登陆</h3>
+<form id="form_sign_in">
+    <label>请输入用户名：</label>
+    <input type="text" id="user_name" required="required" /><br/>
+    <label>请输入密码：</label>
+    <input type="password" id="user_password" required="required" /><br/>
+    <input type="submit" value="登陆">
+</form>
+<p id="sign_in_result"></p>
+
+<script src="main.js"></script>
+</body>
+</html>

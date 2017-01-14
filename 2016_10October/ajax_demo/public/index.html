@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #login{
+            width:400px;
+            height:350px;
+            margin:50px auto;
+            display: none;
+            background-color: white;
+        }
+        #create{
+            width:400px;
+            height:350px;
+            margin:50px auto;
+            display: none;
+            background-color: white;
+        }
+        #box{
+            width:100%;
+            height:900px;
+            background-color: rgba(0,0,0,0.2);
+            z-index: 100;
+            display: none;
+            position: absolute;
+        }
+        button{
+            position: absolute;
+            z-index: 0;
+        }
+        a{
+            text-decoration: underline;
+            color: blue;
+            margin-left: 30px;
+        }
+        #inchange{
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+<button onclick="show(0)">登录</button>
+<button onclick="show(1)" style="margin-left: 70px">注册</button>
+<div id="box">
+<iframe id="login" src="index_one.html"></iframe>
+<iframe id="create" src="index_two.html"></iframe>
+    <a id="inchange" onclick="inchange()"></a>
+    <a onclick="iframe_close()">关闭</a>
+</div>
+<script>
+    (function(){
+        var i=0;
+        function show(num){
+            i=num;
+            $("#box").css('display','block');
+            if(num==0){
+                $("#login").css('display','block');
+                $("#create").css('display','none');
+                $("#inchange").text("没有账户，进行注册")
+            }else{
+                $("#create").css('display','block');
+                $("#login").css('display','none');
+                $("#inchange").text("已有账户，进行登录")
+            }
+        }
+
+        function inchange(){
+            if(i==0){
+                show(1);
+            }else{
+                show(0);
+            }
+        }
+        function iframe_close(){
+            $("#box").css("display","none");
+        }
+        window.show=show;
+        window.inchange=inchange;
+        window.iframe_close=iframe_close;
+//        show(0);
+    })();
+</script>
+</body>
+</html>

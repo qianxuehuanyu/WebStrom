@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .rect {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left:0px;
+        }
+        .bect {
+            width: 0px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left:50px;
+        }
+        .onclick{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left:100px;
+        }
+    </style>
+
+    <script src="jquery.min.js"></script>
+
+</head>
+<body>
+<div class="onclick">
+<div class="rect"></div>
+<div class="bect"></div>
+</div>
+<button id="btn-show-rect">呈现</button>
+<script src="main.js"></script>
+</body>
+</html>
