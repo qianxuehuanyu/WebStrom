@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>用户</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% for(let u of users){ %>
+    <tr>
+        <form class="form-user">
+            <td><input type="text" name="id" disabled="disabled" required="required" value="<%= u.id %>"></td>
+            <td><input type="text" name="user" required="required" value="<%= u.user %>"></td>
+            <td><input type="number" name="age" required="required" value="<%= u.age %>"></td>
+            <td>
+                <a class="btn-delete" href="/delete?id=<%= u.id %>" target="_blank">删除</a>
+                <input type="submit" value="保存">
+            </td>
+        </form>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<div>
+    <form id="form-add-user">
+        <input type="text" name="user" required="required">
+        <input type="number" name="age" required="required">
+        <input type="submit" value="保存">
+    </form>
+</div>
+
+<script src="/javascripts/index.js"></script>
+</body>
+</html>

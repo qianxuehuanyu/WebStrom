@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+    <button bindtap="btnShowMyPageClicked">Show MyPage</button>
+    <button bindtap="btnShowRectPageClicked">呈现绘图界面</button>
+</view>

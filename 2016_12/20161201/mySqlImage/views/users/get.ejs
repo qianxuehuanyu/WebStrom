@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<body>
+<!--<a href="http://localhost:3000/user/get">返回</a>-->
+
+
+<div id="show" style="display: none;">
+    <button id="returnbackadd">返回添加</button>
+<table >
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>文本信息(text)</td>
+        <td>filename</td>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(var i = 0;i < users.length;i++){
+        var user = users[i]; %>
+    <tr>
+        <td><%= user.id %></td>
+        <td><%= user.text %></td>
+        <td><%= user.filename %></td>
+
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td><img src="<%=user.url %>"></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+</div>
+<div id="add" style="display: block;">
+    <button id="seeingshow">查看数据库</button>
+    <br/>
+    <form action="/users/get" method="post" enctype="multipart/form-data" id="form-user">
+        <p>本地浏览</p>
+        <input type="file" name="inimage" id="addimage" style="width: 70px;">
+        <input type="text" name="infilename" style="border: none;" id="showfilename" readonly="readonly">
+        </form>
+<br/>
+    <form id="form-insave">
+        <input type="text" name="infilename" style="display: none; border: none;" id="addfilename" readonly="readonly">
+        <label>图片描述信息</label>
+        <input type="text" name="intext" id="addtext" required="required">
+        <input type="submit" value="保存">
+        <p>图片内容</p>
+        <input type="text" name="inimage" value="<%= file.url %>" style="display: none;">
+        <input type="image" src="<%= file.url %>" id="waitsave" style="display: none;">
+
+    </form>
+</div>
+<script src="/users/get.js"></script>
+<script>
+    $("#addimage").on("change", function (e) {
+        $("#form-user").submit();
+    });
+    console.log("111");
+    var filekind="<%= file.kind %>";
+    if(filekind=="no"){
+
+    }else{
+        var filename="<%= file.originalname %>";
+        $("#addfilename").val(filename);
+        $("#waitsave").css("display","block");
+        $("#addtext").val(filename);
+        $("#showfilename").val(filename);
+    }
+    $("#returnbackadd").click(function () {
+        $("#show").css("display","none");
+        $("#add").css("display","block");
+        $("#showfilename").val("");
+        $("#waitsave").css("display","none");
+        $("#addtext").val("");
+    });
+    $("#seeingshow").click(function () {
+        $("#show").css("display","block");
+        $("#add").css("display","none");
+        $("#showfilename").val("");
+        $("#waitsave").css("display","none");
+        $("#addtext").val("");
+    });
+</script>
+</body>
+</html>

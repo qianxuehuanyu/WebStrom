@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<p id="listname"></p>
+<img id="inimage" src="<%=file.url%>" style="display: none;">
+<audio id="inaudio" controls="controls" src="<%=file.url%>" style="display: none"></audio>
+<video id="invideo" controls="controls" src="<%=file.url%>" style="display: none;"></video>
+</body>
+<script>
+    var inp=document.getElementById("listname");
+    var kinds;
+    kinds="<%=file.mimetype %>";
+    //        console.log(kinds);
+    var namechange=/\/.+/;
+    var result=namechange.exec(kinds);
+    kinds=kinds.replace(result[0],"");
+    //        console.log(result,kinds);
+    var inurl="<%=file.url%>";
+    var inmusic=document.getElementById("inaudio");
+    var inimage=document.getElementById("inimage");
+    var invideo=document.getElementById("invideo");
+    switch (kinds){
+        case "audio":{
+            inmusic.style.display="block";
+            inp.innerText="name:"+"<%=file.originalname%>";
+            inimage.remove();
+            invideo.remove();
+        }break;
+        case "image":{
+            inimage.style.display="block";
+            inp.innerText="name:"+"<%=file.originalname%>";
+            inmusic.remove();
+            invideo.remove();
+        }break;
+        case "video":{
+            invideo.style.display="block";
+            inp.innerText="name:"+"<%=file.originalname%>";
+            inimage.remove();
+            inmusic.remove();
+        }break;
+        default:{
+            alert("wrong of Internet");
+        }
+    }
+
+</script>
+</html>
