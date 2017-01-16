@@ -1,0 +1,106 @@
+.box{
+    width:306px;
+    height:306px;
+    border:1px solid #f40;
+}
+.box div{
+    width:100px;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    border:1px solid #f40;
+    color: #ff4400;
+    font-size:24px;
+    font-weight: bold;
+    float:left;
+}
+#start{
+    width:100px;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    border:1px solid #f40;
+    color: #ff4400;
+    font-size:24px;
+    font-weight: bold;
+    float:left;
+}
+#start:hover{
+    background-color: #ff4400;
+    color:white;
+    cursor: pointer;
+}
+.d_one{
+    animation: aone 5s linear;
+    background-color: #ff4400;color:white!important;
+}
+@keyframes aone {
+    0%{background-color: #ff4400;color:white;}
+    5%{background-color: #ff4400;color:white;}
+    20%{background-color: white;color:#ff4400;}
+    50%{background-color: white;color:#ff4400;}
+    100%{background-color: #ff4400;color:white;}
+}
+.d_two{
+    animation: atwo 5s linear;
+}
+@keyframes atwo {
+    0%{background-color: white;color:#ff4400;}
+    20%{background-color: #ff4400;color:white;}
+    30%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_three{
+    animation: athree 5s linear;
+}
+@keyframes athree {
+    0%{background-color: white;color:#ff4400;}
+    30%{background-color: #ff4400;color:white;}
+    40%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_four{
+     animation: afour 5s linear;
+ }
+@keyframes afour {
+    0%{background-color: white;color:#ff4400;}
+    40%{background-color: #ff4400;color:white;}
+    50%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_five{
+    animation: afive 5s linear;
+}
+@keyframes afive {
+    0%{background-color: white;color:#ff4400;}
+    50%{background-color: #ff4400;color:white;}
+    60%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_six{
+     animation: asix 5s linear;
+ }
+@keyframes asix {
+    0%{background-color: white;color:#ff4400;}
+    60%{background-color: #ff4400;color:white;}
+    70%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_server{
+    animation: aserver 5s linear;
+}
+@keyframes aserver {
+    0%{background-color: white;color:#ff4400;}
+    70%{background-color: #ff4400;color:white;}
+    80%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}
+.d_eight{
+    animation: aeight 5s linear;
+}
+@keyframes aeight {
+    0%{background-color: white;color:#ff4400;}
+    80%{background-color: #ff4400;color:white;}
+    90%{background-color: white;color:#ff4400;}
+    100%{background-color: white;color:#ff4400;}
+}

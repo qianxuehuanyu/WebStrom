@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="five" width=400 height=400 style="background-color: #00B7FF;">
+
+</canvas>
+<script>
+    var five=document.getElementById("five");
+    var mycanvas=five.getContext("2d");
+    var i=0;
+    mycanvas.save();
+    var change=setInterval(function () {
+        if(i<90){
+            mycanvas.beginPath();
+            mycanvas.moveTo(100,100);
+            mycanvas.arc(100,100,50,0,(i+2)/180*Math.PI);
+            mycanvas.fillStyle="gold";
+            mycanvas.fill();
+            mycanvas.closePath();
+            mycanvas.beginPath();
+            mycanvas.fillStyle="black";
+            mycanvas.fillText("50%",120,120);
+            mycanvas.closePath();
+            i++;
+        }else if(i<270&&i>=90){
+            mycanvas.beginPath();
+            mycanvas.moveTo(100,100);
+            mycanvas.arc(100,100,50,0.5*Math.PI,(i+1)/180*Math.PI);
+            mycanvas.fillStyle="blue";
+            mycanvas.fill();
+            mycanvas.closePath();
+            mycanvas.fillStyle="black";
+            mycanvas.fillText("100%",70,100);
+            mycanvas.closePath();
+            i++;
+        }else if(i<360&&i>=270){
+            mycanvas.beginPath();
+            mycanvas.moveTo(100,100);
+            mycanvas.arc(100,100,50,1.5*Math.PI,(i+1)/180*Math.PI);
+            mycanvas.fillStyle="green";
+            mycanvas.fill();
+            mycanvas.closePath();
+            mycanvas.fillStyle="black";
+            mycanvas.fillText("50%",120,80);
+            mycanvas.closePath();
+            i++;
+        }else{
+            clearInterval(change);
+        }
+    },10);
+    mycanvas.restore();
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            background-color:#e4393c;
+        }
+        #box{
+            width:600px;height:600px;
+            border-radius: 200px;
+            position: relative;
+        }
+        #box #inbox{
+            width:400px;height:400px;
+            border-radius: 200px;
+            background-image:url(img/inchangeround.jpg);
+            background-size: 100% 100% ;
+            position: absolute;
+        }
+
+        #box img{
+            width:130px;height:130px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background-image:url(img/inchangeround.jpg) ;
+            background-size: 400px 400px;
+            background-position: -135px -135px;
+            position: absolute;
+            left:131px;top:131px;
+        }
+        #box .jiantou{
+            height:80px;
+            width: 2px;
+            background-color: red !important;
+            position: absolute;
+            left:199px;top:119px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="300px" height="300px"></canvas>
+<div id="box">
+    <div id="inbox"></div>
+    <img onclick="roundchange()"/>
+    <div class="jiantou"></div>
+</div>
+<div>1111</div>
+<!--画布-->
+<script>
+    var canvas=document.getElementById('canvas');
+    var context=canvas.getContext('2d');
+    //创建开始标识路径
+    context.beginPath();
+    context.arc(100,100,50,0,Math.PI*2,true);
+    //结束
+    //			context.fillStyle='greenyellow'
+    context.closePath();
+    //context.fill();   //填充
+    context.stroke();//空心
+
+
+    context.beginPath();
+    context.arc(100,100,50,0,Math.PI*(1/6),false);
+    context.fillStyle='white';
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(150,100);
+    context.lineTo(143.8,125);
+    context.closePath();
+    context.fillStyle='white';
+    context.fill();
+
+    context.beginPath();
+    context.arc(100,100,50,Math.PI*(1/6),Math.PI*(1/3),false);
+    context.fillStyle='black';
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(143.6,125);
+    context.lineTo(125,143.6);
+    context.closePath();
+    context.fillStyle='black';
+    context.fill();
+
+    context.beginPath();
+    context.arc(100,100,50,Math.PI*(1/3),Math.PI*(1/2),false);
+    context.fillStyle='white';
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(125,143.7);
+    context.lineTo(100,150);
+    context.closePath();
+    context.fillStyle='white';
+    context.fill();
+    context.beginPath();
+    context.arc(100,100,50,Math.PI*(1/3),Math.PI*(1/2),false);
+    context.fillStyle='white';
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.moveTo(100,100);
+    context.lineTo(125,143.6);
+    context.lineTo(100,150);
+    context.closePath();
+    context.fillStyle='white';
+    context.fill();
+
+    context.beginPath();
+    context.moveTo(100,100);
+    context.arc(100,100,50,Math.PI*(1/2),Math.PI*(2/3),false);
+    context.fillStyle='black';
+    context.closePath();
+    context.fill();
+//    context.beginPath();
+//    context.moveTo(100,100);
+//    context.lineTo(100,150);
+//    context.lineTo(75,143.6);
+//    context.closePath();
+//    context.fillStyle='black';
+//    context.fill();
+
+</script>
+
+<script>
+    var inbox=document.getElementById("inbox");
+    inbox.style.transform="rotate("+20+"deg)";
+    console.log(inbox);
+    var i=6;
+    var l;
+    function transformR(num){
+        l=num;
+        setTimeout(function(){
+        inbox.style.transform="rotate("+i+"deg)";
+        i=i+6*l;l++;
+        console.log(l);
+            if(l>20){
+                onround();
+            }else{transformR(l);}
+
+        },100);
+    }
+    function roundchange(){
+            transformR(1);
+    }
+
+    function onround(){
+        var times=parseInt(Math.random()*1)+1;
+        times=times*1000;
+//        console.log("1111111111");
+        var ontimes=setInterval(function(){
+            i=i+19*6+1;
+            inbox.style.transform="rotate("+i+"deg)";
+            times-=100;
+            if(times<0){
+                clearInterval(ontimes);
+//                console.log("222222222");
+                slowround();
+            }
+        },100);
+    }
+    var ondeg1=parseInt(Math.random()*60);
+    var ondeg2=parseInt(Math.random()*6);
+    console.log(ondeg1+"..."+ondeg2);
+    function slowround(){
+        setTimeout(function(){
+            inbox.style.transform="rotate("+i+"deg)";
+            i=i+6*l;l--;
+            console.log(l);
+            if(l>0){
+                slowround();
+            }else{
+//                console.log("33333");
+                if(ondeg1>0){
+                inbox.style.transform="rotate("+i+"deg)";
+                i=i+6;ondeg1--;l++;
+                slowround();
+                }else{
+                    i=i-6+ondeg2;
+                    inbox.style.transform="rotate("+i+"deg)";
+//                    console.log("4444444");
+                }
+            }
+        },100);
+    }
+</script>
+</body>
+</html>

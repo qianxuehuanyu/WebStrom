@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name="adiuo/mp3";
+    var namechange=/\/.+/;
+    var result=namechange.exec(name);
+    name=name.replace(result[0],"");
+    console.log(result,name);
+</script>
+</body>
+</html>

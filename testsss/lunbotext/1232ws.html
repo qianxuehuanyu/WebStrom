@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #zt{
+            width: 500px;
+            height: 300px;
+            margin: 50px auto 0;
+            background-color: aquamarine;
+            position: relative;
+        }
+        .a{
+            position: absolute;
+            color: white;
+            font-size: 30px;
+            top:135px;
+            display: none;
+        }
+        #left{
+            left: 20px;
+            cursor: pointer;
+        }
+        #right{
+            right: 20px;
+            cursor: pointer;
+        }
+        #conter{
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+        #ul{
+
+            position: absolute;
+            left:170px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="zt">
+    <div id="conter"></div>
+    <div id="left" class="a"><</div>
+    <div id="right" class="a">></div>
+    <ul id="ul">
+
+    </ul>
+</div>
+</body>
+<script>
+    var arr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+    var arra=["http://www.baidu.com","http://www.jd.com","http://www.taobao.com","http://www.tianmao.com","http://www.aqiyi.com"];
+            var con=document.getElementById("conter");
+    var zt=document.getElementById("zt");
+    var left=document.getElementById("left");
+    var right=document.getElementById("right");
+    var ul=document.getElementById("ul");
+    var num=0;
+    var time=null;
+    //		var arra=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+    for(var i=0;i<arr.length;i++){
+        var a=document.createElement("a");
+        a.href=arra[i];
+        var img=document.createElement("img");
+        img.style.cssText="width: 500px; height: 300px; float: left;"
+        img.src=arr[i];
+        a.appendChild(img);
+        con.appendChild(a);
+        var li=document.createElement("li");
+        li.style.cssText="list-style: none; width:20px;height: 20px;border: 1px solid black;float: left; margin-left: 10px;border-radius: 50%;cursor: pointer;";
+        ul.appendChild(li);
+    }
+
+
+    var arrb=con.getElementsByTagName("a");
+    var lia=ul.getElementsByTagName("li");
+    for(var k=0;k<lia.length;k++){
+        lia[k].index=k;
+        lia[k].onclick=function(){
+
+            for(var t=0;t<lia.length;t++){
+                lia[t].style.backgroundColor="";
+            }
+            num=this.index;
+            this.style.backgroundColor="red";
+            cai();
+        }
+    }
+    function cai(){
+        for(var j=0;j<arrb.length;j++){
+
+            if(j==num){
+                lia[j].style.backgroundColor="red";
+                arrb[j].style.display="block";
+            }else{
+                arrb[j].style.display="none";
+                lia[j].style.backgroundColor="";
+            }
+        }
+    }
+    cai();
+    function zyc(){
+        time=setInterval(function(){
+            num++;
+            if(num>4){
+                num=0
+            }
+            cai();
+        },1000)
+    }
+    zyc();
+    zt.onmouseover=function(){
+        clearInterval(time);
+        left.style.display="block";
+        right.style.display="block";
+        left.onclick=function(){
+
+            num--;
+
+            if(num<0){
+                num=4;
+            }
+            cai();
+//            console.log(num)
+        };
+        right.onclick=function(){
+            left.style.display="none";
+            right.style.display="none";
+            num++;
+
+            if(num>4){
+                num=0
+            }
+            cai();
+//	     	console.log(num)
+        }
+    };
+    zt.onmouseout=function(){
+        zyc();
+    };
+    //	     left.onclick=function(){
+    //
+    //	     	num--;
+    //
+    //	     	if(num<0){
+    //	     		num=4
+    //	     	}
+    //	     	cai();
+    //	     	console.log(num)
+    //	     }
+    //	     right.onclick=function(){
+    //
+    //	     	num++;
+    //
+    //	     	if(num>4){
+    //	     		num=0
+    //	     	}
+    //	     	cai();
+    ////	     	console.log(num)
+    //	     }
+</script>
+</html>

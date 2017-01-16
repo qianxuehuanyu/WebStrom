@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="" content="portrait">
+    <title>zouxiu--走秀</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/swiper-3.2.7.min.css"/>
+    <link rel="stylesheet" href="css/zouxiuindex.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+
+<header>
+<div class="container-fluid clearpadding">
+    <div class="row clearmargin">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1   inheader clearpadding">
+        <div class="col-lg-4 col-md-4 col-sm-4 inheaderleft left clearpadding">
+            <a href="login.html" class="visible-lg visible-md visible-sm left">登录/注册</a>
+            <div class="inheaderbuycar clearpadding visible-lg visible-md left">
+                <a>
+                 购物袋<em>0</em>件
+                </a>
+                <div class="inheaderbuycardis clearpadding">
+                    <span>购物袋里暂时没有商品!</span>
+                </div>
+            </div>
+            <div class="inheadermyxiu clearpadding visible-lg  left">
+                <a href="#" class="inmyxiu">我的走秀</a>
+                <div class="inheadermyxiudis clearpadding">
+                    <a href="#">我的订单</a>
+                    <a href="#">自主退货</a>
+                    <a href="#">我的收藏</a>
+                    <a href="#">帮助中心</a>
+                    <a href="#">全部吐槽</a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-xs col-lg-5 col-md-5 col-sm-5 inheaderlogo left">
+            <a href="http://www.xiu.com"></a>
+        </div>
+        <div class="visible-xs col-xs-12 inheaderhidding">
+            ZXIU&nbsp;走秀网
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 inheaderfind right">
+            <div class="find clearpadding" id="find">
+            <input type="text" class="left" name="findlink" id="findlink">
+            <span class="glyphicon glyphicon-search right findtext"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</header>
+<nav class="visible-lg">
+    <div class="container-fluid clearpadding">
+    <div class="blacknav">
+        <ul class="list-inline row">
+            <li class="col-lg-1 col-lg-offset-2"><a href="#" class="innav">首页</a></li>
+            <li class="col-lg-1"><a href="#">新品</a></li>
+            <li class="col-lg-1"><a href="#">男士</a></li>
+            <li class="col-lg-1"><a href="#">女士</a></li>
+            <li class="col-lg-1"><a href="#">品牌</a></li>
+            <li class="col-lg-1"><a href="#">发现</a></li>
+            <li class="col-lg-1"><a href="#">专题</a></li>
+            <li class="col-lg-2 text-left"><a href="#">手机走秀</a></li>
+        </ul>
+    </div>
+        <div class="clearfix clearpadding clearmargin" style="height: 0;"></div>
+    <div class="whitenav">
+        <ul class="list-inline row">
+            <li class="col-lg-1 col-lg-offset-1"><a href="#">包袋</a></li>
+            <li class="col-lg-1"><a href="#">服装</a></li>
+            <li class="col-lg-1"><a href="#">鞋靴</a></li>
+            <li class="col-lg-1"><a href="#">腕表</a></li>
+            <li class="col-lg-1"><a href="#">配饰</a></li>
+            <li class="col-lg-1"><a href="#">妆品</a></li>
+            <li class="col-lg-1"><a href="#">生活</a></li>
+            <li class="col-lg-1"><a href="#">婴童</a></li>
+            <li class="col-lg-1"><a href="#">豪车</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<section class="timerund">
+    <div id="carousel-example-generic" class="carousel slide visible-xs" data-ride="carousel">
+        <!-- Indicators -->
+        <!--<ol class="carousel-indicators">-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="4"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="5"></li>-->
+        <!--</ol>-->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#"><img src="img/a1.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/a2.jpg" alt="..."></a>
+            </div>
+            <div class="item ">
+                <a href="#"><img src="img/a3.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/a4.jpg" alt="..."></a>
+            </div>
+            <div class="item ">
+                <a href="#"><img src="img/a5.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/a6.jpg" alt="..."></a>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    <div id="carousel-example-generic2" class="carousel slide hidden-xs" data-ride="carousel" style="width: 70%;;overflow: hidden;margin: 0 auto;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="5"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#"><img src="img/aa1.png" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/aa2.png" alt="..."></a>
+            </div>
+            <div class="item ">
+                <a href="#"><img src="img/aa3.png" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/aa4.png" alt="..."></a>
+            </div>
+            <div class="item ">
+                <a href="#"><img src="img/aa5.png" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/aa6.png" alt="..."></a>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev" style="height: 100%">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next" style="height: 100%">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<aside>
+    <div class="swiper-container firstad visible-xs" id="container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/aa1.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/aa2.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/aa3.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/aa4.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/aa5.png"/>
+                <button onclick="swiperclose()">join in!</button>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+
+<footer class="visible-xs phonefooter">
+    <div class="footerindex"><a href="index.html">
+        <img src="img/qie_07.jpg">
+    </a></div>
+    <div ><a href="kinds.html">
+        <img src="img/qie_09.jpg">
+    </a></div>
+    <div ><a href="buycar.html">
+        <img src="img/qie_11.jpg">
+    </a></div>
+    <div ><a href="myxiu.html">
+        <img src="img/qie_13.jpg">
+    </a></div>
+    <div ><a href="more.html">
+        <img src="img/qie_15.jpg">
+    </a></div>
+</footer>
+</body>
+<script src="js/swiper-3.2.7.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/main.js"></script>
+</html>

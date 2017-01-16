@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="fenxiang1_two.css">
+</head>
+<body>
+<div class="box">
+    <div >8</div>
+    <div >1</div>
+    <div >2</div>
+    <div >7</div>
+    <a id="start" onclick="start()">开始</a>
+    <div >3</div>
+    <div >6</div>
+    <div >5</div>
+    <div >4</div>
+</div>
+<script>
+    function start(){
+    var inbox=document.getElementsByClassName("box");
+        var indiv=inbox[0].getElementsByTagName("div");
+        var indiv_list=["d_eight","d_one","d_two","d_server","d_three","d_six","d_five","d_four"];
+        indiv[1].style.cssText="";
+        for(var i= 0;i<indiv.length;i++){
+            indiv[i].className=indiv_list[i];
+        }
+        setTimeout(function(){
+            for(var i= 0;i<indiv.length;i++){
+                    indiv[i].className ="";
+                if(i==1){
+                    indiv[i].style.cssText="background:#f40;color:white;"
+                }
+            }
+        },11000)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+header{
+    background-color: #333333;
+    height: auto;
+    line-height: 32px;
+}
+.clearmargin{
+    margin: 0 !important;
+}
+.clearpadding{
+    padding: 0 !important;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.inheader{
+    padding: 0;
+    min-height: 0;
+}
+.inheader div{
+    padding-top:5px; ;
+}
+.inheaderleft{
+    color: #d7d7d7;
+}
+.inheaderleft a{
+    line-height: 32px;
+    font-size: 13px;
+    color: #d7d7d7;
+    display: block;
+}
+.inheaderfind{
+    color:#d7d7d7;
+}
+.find{
+    width: 100%;
+    height: 22px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    margin:  5px 0;
+}
+.find input{
+    border: none;
+    background-color: #333;
+    color: #333;
+    width: 80%;
+    outline: none;
+    height: 100%;
+    padding-left:5px;
+}
+.find input:focus{
+    background-color: white;
+}
+.findtext{
+    height: 100%;
+    padding-right:5px ;margin-top:2px; ;
+    line-height: 100%;
+}
+.inheaderlogo{
+    text-align: center;
+    margin-left:-40px ;
+}
+.inheaderlogo a{
+    display: block;
+    width: 212px;
+    height: 32px;
+    margin: 5px auto;
+    background: url(../img/spriter2016.png) no-repeat 0 0;
+}
+.inheaderhidding{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 42px;
+    line-height: 42px;
+    background-color: palevioletred;
+    position: relative;
+}
+.inheaderhidding a{
+    display: block;
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 22px;
+    font-weight: normal;
+}
+.inheaderbuycar{
+    display: inline-block;
+    line-height: 32px;
+    font-size: 13px;
+    color: #d7d7d7;
+    position: relative;
+    height: auto;
+}
+/*.inheaderbuycar:hover{top:1px;}*/
+.inheaderbuycar em{
+    font-style: normal;
+    color: #f78407;
+}
+.inheaderbuycar a{
+    padding: 0px 4px 0px 26px;
+    border: 1px solid #333;
+    border-bottom: none;
+    background: url(../img/spriter2016.png) no-repeat -215px -43px;
+    z-index: 999;
+    display: block;
+    position: relative;top:0px;
+}
+.inheaderbuycar:hover a{
+    cursor: pointer;
+    color: #d50215;
+    border: 1px solid #d7d7d7;
+    border-bottom: none;
+    background-color: #fff;
+    background-position: -215px -78px;
+    z-index: 999;
+    padding: 0px 4px 0px 26px;
+    top:1px;
+}
+.inheaderbuycar .inheaderbuycardis{
+    display: none;
+    position: absolute;
+    top:33px;left: 0;
+    border: 1px solid #d7d7d7;
+    width: 280px;
+    padding: 15px 8px 8px;
+    z-index: 10;
+    background-color: white;
+}
+.inheaderbuycar:hover .inheaderbuycardis{
+    display: block;
+}
+.inheaderbuycardis span{
+    color:#333;
+    padding-top: 0px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    line-height: 34px;
+}
+.inheadermyxiu{
+    display: inline-block;
+    line-height: 32px;
+    font-size: 13px;
+    color: #d7d7d7;
+    position: relative;
+    height: auto;
+}
+.inheadermyxiu .inheadermyxiudis{
+    position: absolute;
+    display: none;
+    height: auto;
+    width: auto;
+    border: 1px solid #d7d7d7;
+    border-top:none ;
+    background-color: white;
+}
+.inheadermyxiu .inmyxiu{
+    border: 1px solid #333;
+    border-bottom: none;
+    padding: 0px 15px 0px 10px;
+    z-index: 999;
+    display: block;
+    position: relative;top:0px;
+    background: url(../img/spriter2016.png) no-repeat right -111px;
+}
+.inheadermyxiu .inheadermyxiudis a{
+    z-index: 999;
+    padding: 0px 15px 0px 10px;
+    display: block;
+    position: relative;top:0px;
+    border: none;
+    color: #333;
+}
+.inheadermyxiu:hover{background-color: white;}
+.inheadermyxiu:hover .inmyxiu{
+    border: 1px solid #d7d7d7;
+    border-bottom: none;
+    color: #d50215;
+    background: url(../img/spriter2016.png) no-repeat right -146px;
+}
+.inheadermyxiu:hover .inheadermyxiudis{
+    display: block;
+}
+.inheadermyxiu:hover .inheadermyxiudis a{
+    z-index: 999;
+    display: block;
+    position: relative;top:0px;
+    border: none;
+    color: #333;
+}
+.inheadermyxiu .inheadermyxiudis a:hover{color:#d50215; }
+nav{
+    height: auto;width: 100%;
+}
+.blacknav{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+}
+.whitenav{
+    width: 100%;
+    height: 42px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #fff;
+}
+.blacknav ul {width: 70%;margin: 0 auto;}
+.blacknav ul li{line-height: 42px;text-align: center; }
+.blacknav ul li a{color: #eee;border-bottom: 2px solid #333;padding:0 5px 8px; }
+.blacknav ul li a.innav{color: #bfbfbf; border-bottom: 2px solid #727071;}
+.blacknav ul li:hover a{color: #bfbfbf; border-bottom: 2px solid #727071;
+text-decoration: none;}
+
+.whitenav ul {width: 60%;margin: 0 auto;height: auto;padding-left:40px; }
+.whitenav ul li{line-height: 42px;text-align: center;float: none!important;}
+.whitenav ul li a{color: #333; }
+.whitenav ul li a:hover{text-decoration: none; }
+
+.timerund{height: auto;margin: 0 auto;}
+.timerund img{margin: 0 auto;height: auto;}
+.firstad{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;left:0;
+    background-color: white;
+}
+#container img{
+    width: 100%;
+}
+#container div{
+    width: 100%;height: 100%;
+}
+#container button{
+    display: block;
+    width: 30%;
+    margin: 50% auto 0;
+}
+
+.phonefooter{
+    background-color: #484850;
+    width: 100%;
+    height: 63px;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid silver;
+}
+.phonefooter div{
+    width: 20%;
+    height: 63px;
+    border-top: 3px solid #333;
+    margin: 0;padding: 0;
+    float: left;
+}
+.phonefooter div.footerindex{
+    border-top: 3px solid #dd269e;
+    margin: 0;padding: 0;
+}
+.phonefooter div a{
+    width: 100%;
+    height: 100%;
+    margin: 0;padding: 0;
+    line-height: 100%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+.phonefooter div a img{
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

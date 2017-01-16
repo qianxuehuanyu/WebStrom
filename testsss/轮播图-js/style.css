@@ -1,0 +1,27 @@
+#carousel {
+    height: 600px;
+    width: 1200px;
+    margin: 0 auto;
+    background: #000;
+}
+
+#carouselContent{
+    /*overflow: hidden;*/
+}
+
+#carousel .controlButton{
+    position: absolute;
+    top:50%;
+    font-size: 40pt;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#carousel .preButton {
+    left: 60px;
+}
+
+#carousel .nextButton {
+    right: 60px;
+}
+

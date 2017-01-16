@@ -1,0 +1,32 @@
+.box{
+    width:306px;
+    height:306px;
+    border:1px solid #f40;
+}
+.box div{
+    width:100px;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    border:1px solid #f40;
+    color: #ff4400;
+    font-size:24px;
+    font-weight: bold;
+    float:left;
+}
+#start{
+    width:100px;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    border:1px solid #f40;
+    color: #ff4400;
+    font-size:24px;
+    font-weight: bold;
+    float:left;
+}
+#start:hover{
+    background-color: #ff4400;
+    color:white;
+    cursor: pointer;
+}

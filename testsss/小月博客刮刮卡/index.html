@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>小月博客刮刮卡案例分享</title>
+
+	    <style type="text/css">
+			*{
+	    		padding: 0;
+	    		margin: 0;
+	    		list-style: none;
+	    	}
+	    	body{
+	    		background: #3eb249;
+	    		position: relative;
+	    	}
+			.ggl{
+	    		position: relative;
+	    		width: 85.6%;
+	    		height: 90px;
+	    		margin: -5px auto;
+	    		/*background: url(img/ggl.png) no-repeat center center;*/
+	    		background-size: 100% 100%;
+	    	}
+	    	.canvas{
+				position:absolute;
+				top:2px;
+				left:2.5%;
+				width:95%;
+				height:82px;
+				line-height:82px;
+				text-align:center;
+				z-index: 2;
+			}
+	    </style>
+	</head>
+	<body>
+		<div class="ggl" id="top1">
+			<canvas id="c1" class="canvas"></canvas>
+		</div>
+		<div class="ggl" id="top2">
+			<canvas id="c2" class="canvas"></canvas>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+<script src="mian.js"></script>
+			
+	</body>
+
+</html>

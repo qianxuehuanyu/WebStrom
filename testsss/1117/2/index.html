@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="box" class="row" style="width: 100%;height: auto;margin-bottom: 100px;">
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>000</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>111</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>222</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>333</a></div>
+
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>444</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>555</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>666</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>777</a></div>
+
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>888</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>999</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>101010</a></div>
+    <div class="indiv col-lg-3 col-md-4 col-sm-6 col-xs-11 "><a>111111</a></div>
+</div>
+<!--<div class="row">-->
+    <!--<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>-->
+    <!--<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>-->
+
+    <!--&lt;!&ndash; Add the extra clearfix for only the required viewport &ndash;&gt;-->
+    <!--<div class="clearfix visible-xs-block"></div>-->
+
+    <!--<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>-->
+    <!--<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>-->
+<!--</div>-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    var box=document.getElementById("box");
+    var inas=box.getElementsByTagName("a");
+    for(var i=0;i<inas.length;i++){
+//        var inwidth=(parseInt(Math.random()*100)+100)+"px";
+//        var inwidth="auto";
+        var divheight=(parseInt(Math.random()*100)+100)+"px";
+//        var divheight="40px";
+        var divbackground="rgba("+parseInt(Math.random()*255)+","+
+                +parseInt(Math.random()*255)+","+
+                +parseInt(Math.random()*255)+",0.9)";
+//        indivs[i].style.width=inwidth;
+//        indivs[i].style.overflow="hidden";
+        inas[i].style.height=divheight;
+        inas[i].style.width="100%";
+        inas[i].style.backgroundColor=divbackground;
+        inas[i].style.display="block";
+        inas[i].style.position="absolute";
+    }
+    var indivs=box.getElementsByClassName("indiv");
+
+    //    <div class="clearfix visible-lg-block"></div>
+//    for(var m=0;m<indivs.length;m++){
+//        indivs[m].className="indiv col-lg-3";
+//        if(m%4==0){
+//            var clearfix=document.createElement("div");
+//            clearfix.className="clearfix visible-lg-block";
+//            box.insertBefore(clearfix,indivs[m]);
+//        }
+//    }
+//    intop(4);
+
+    window.onresize=function(){
+        var inclearfix=box.getElementsByClassName("clearfix");
+        for(var i=inclearfix.length;i>=1;i--){
+            box.removeChild(inclearfix[i-1]);
+        }
+        console.log(inclearfix);
+        console.log(window.innerWidth);
+        if(window.innerWidth>1200){
+            for(var m=0;m<indivs.length;m++){
+                indivs[m].className="indiv col-lg-3";
+                if(m%4==0){
+                    var clearfix=document.createElement("div");
+                    clearfix.className="clearfix visible-lg-block";
+                    box.insertBefore(clearfix,indivs[m]);
+                }
+            }
+            intop(4);
+        }else if(window.innerWidth>992){
+            for(var m=0;m<indivs.length;m++){
+                indivs[m].className="indiv col-md-4";
+                if(m%3==0){
+                    var clearfix=document.createElement("div");
+                    clearfix.className="clearfix visible-lg-block";
+                    box.insertBefore(clearfix,indivs[m]);
+                }
+            }
+            intop(3);
+        }else if(window.innerWidth>768){
+            for(var m=0;m<indivs.length;m++){
+                indivs[m].className="indiv col-sm-6";
+                if(m%2==0){
+                    var clearfix=document.createElement("div");
+                    clearfix.className="clearfix visible-lg-block";
+                    box.insertBefore(clearfix,indivs[m]);
+                }
+            }
+            intop(2);
+        }else if(window.innerWidth<768){
+            for(var m=0;m<indivs.length;m++){
+                indivs[m].className="indiv col-sx-11";
+                var clearfix=document.createElement("div");
+                clearfix.className="clearfix visible-lg-block";
+                box.insertBefore(clearfix,indivs[m]);
+            }
+            intop(1);
+        }
+    };
+
+    function intop(kind) {
+        if(kind!=1){
+        var returntimes = parseInt(inas.length / kind);
+        var last = inas.length % kind;
+        console.log(returntimes, last);
+        for (var i = 0; i < returntimes; i++) {
+            for (var j = kind * i; j < (kind * (i + 1)); j++) {
+                if (i == 0) {
+                    inas[j].style.top = "0";
+//                console.log(col_lg_3[j].style.marginTop);
+                } else {
+                    var addheight = 0;
+                    for (var o = i; o >= 1; o--) {
+                        addheight += parseInt(inas[j - kind * o].style.height);
+                    }
+                    inas[j].style.top = addheight + "px";
+//                console.log(col_lg_3[j].style.marginTop);
+                }
+
+            }
+        }
+        for(var i=kind*returntimes;i<inas.length;i++){
+            var addheight = 0;
+            for (var o = returntimes; o >= 1; o--) {
+                addheight += parseInt(inas[j - kind * o].style.height);
+            }
+            inas[j].style.top = addheight + "px";
+        }
+        }else{
+            for(var a=0;a<inas.length;a++){
+                if(a==0){
+                    inas[a].style.top="0px";
+                }else{
+                var addheight = 0;
+                for (var o = a; o >= 1; o--) {
+                    addheight += parseInt(inas[o-1].style.height);
+                }
+                inas[a].style.top = addheight + "px";
+                }
+            }
+
+        }
+    }
+    window.onresize();
+</script>
+</body>
+</html>
